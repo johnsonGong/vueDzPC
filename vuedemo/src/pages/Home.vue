@@ -2,6 +2,7 @@
 <div class="page-home" ref="mainApp">
     <demo-header></demo-header>
     <div class="comm-body" ref="mainBody">
+        <nav-list></nav-list>
         <router-view/>
     </div>
     <demo-footer></demo-footer>
@@ -21,11 +22,13 @@
  */
 import DemoHeader from '@/components/Header'
 import DemoFooter from '@/components/Footer'
+import NavList from '@/components/NavList'
 export default {
     name: 'Home',
     components: {
         'demo-header': DemoHeader,
-        'demo-footer': DemoFooter
+        'demo-footer': DemoFooter,
+        'nav-list': NavList
     },
     mounted () {
         this.updateSize()
@@ -60,6 +63,10 @@ export default {
     .comm-body {
         position: relative;
         box-sizing: border-box;
+    }
+
+    .btn-list {
+        background-color: #ffffff;
     }
 
 }

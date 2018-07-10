@@ -64,5 +64,28 @@ export default {
         }).catch(function (error) {
             cb(error)
         })
+    },
+    /**
+     * 通用 POST 请求.
+     *
+     * @param {Object} opts
+     * @param {Object} opts.url 接口地址
+     * @param {Object} opts.data 接口地址
+     * @param {function} cbSuccess 回调函数-成功
+     * @param {function} cbFail    回调函数-失败
+     */
+    commPOST (opts, cbSuccess, cbFail) {
+        axios({
+            method: 'post',
+            url: opts.url,
+            responseType: 'json',
+            data: qs.stringify(opts.data)
+        }).then(function (response) {
+            cbSuccess(response)
+        }).catch(function (errorObj) {
+            if (typeof cbFail === 'function') {
+                cbFail(errorObj)
+            }
+        })
     }
 }

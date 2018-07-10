@@ -1,4 +1,5 @@
 {
-  "/mock/initPage.json": "/initPage",
-  "/mock/getUserInfo.json*": "/getUserInfo"
+  "/demo/initPage.json": "/initPage",
+  "/demo/getUserInfo.json*": "/getUserInfo",
+  "/demo/getFruit": "/getFruit"
 }

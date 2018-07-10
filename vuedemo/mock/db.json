@@ -10,5 +10,14 @@
       "name": "张三",
       "age": 18
     }
-  }
+  },
+    "getFruit": {
+        "message": "水果数据",
+        "success": true,
+        "content": {
+            "list": [
+                {"name": "苹果", "price": "15.00"}
+            ]
+        }
+    }
 }
