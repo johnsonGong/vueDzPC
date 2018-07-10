@@ -4,22 +4,22 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
+    state: {
     // 用户名
-    userName: ''
-  },
-  mutations: {
+        userName: ''
+    },
+    mutations: {
     /**
      * 设置用户名
      *
      */
-    setUserName: function (state, payload) {
-      state.userName = payload.val
+        setUserName: function (state, payload) {
+            state.userName = payload.val
+        }
+    },
+    getters: {
+        getUserName: function (state, getters) {
+            return state.userName
+        }
     }
-  },
-  getters: {
-    getUserName: function (state, getters) {
-      return state.userName
-    }
-  }
 })
