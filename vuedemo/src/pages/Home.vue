@@ -1,8 +1,8 @@
 <template>
 <div class="page-home" ref="mainApp">
     <demo-header></demo-header>
+    <nav-list></nav-list>
     <div class="comm-body" ref="mainBody">
-        <nav-list></nav-list>
         <router-view/>
     </div>
     <demo-footer></demo-footer>
@@ -64,6 +64,7 @@ export default {
     .comm-body {
         position: relative;
         box-sizing: border-box;
+        margin-bottom: 10px;
     }
 
     .btn-list {
