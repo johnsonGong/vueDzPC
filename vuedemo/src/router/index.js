@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from '@/pages/Home'
 import Page404 from '@/pages/Page404'
 import DataList from '@/pages/demo/DataList'
+import Summary from '@/pages/demo/Summary'
 
 Vue.use(Router)
 
@@ -13,19 +14,25 @@ Vue.use(Router)
  *
  * @author gonglong-20180710
  */
-export default new Router({
+ let router = new Router({
     routes: [
         {
             path: '/',
             name: 'Home',
             component: Home,
-            redirect: {name: 'DataList'},
+            redirect: {name: 'Summary'},
             children: [
                 {
                     path: 'demo-datalist',
                     name: 'DataList',
-                    meta: {name: 'demo一览'},
+                    meta: {title: 'demo一览'},
                     component: DataList
+                },
+                {
+                    path: 'demo-summary',
+                    name: 'Summary',
+                    meta: {title: 'demo简介'},
+                    component: Summary
                 }
             ]
         }, {
@@ -35,3 +42,14 @@ export default new Router({
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    if ('title' in to.meta) {
+        // 设置标题
+        // ps: 判断特定[对象]中是否存在 key
+        document.title = to.meta.title
+    }
+    next()
+})
+
+export default router

@@ -1,7 +1,7 @@
 <template>
 <div class="page-home" ref="mainApp">
     <demo-header></demo-header>
-    <nav-list></nav-list>
+    <!-- <nav-list></nav-list> -->
     <div class="comm-body" ref="mainBody">
         <router-view/>
     </div>
@@ -64,6 +64,7 @@ export default {
     .comm-body {
         position: relative;
         box-sizing: border-box;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
 

@@ -8,6 +8,8 @@ import qs from 'qs'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded'
 
+// TODO -- axios 拦截器 -20180722
+
 export default {
     /**
    * 示范 POST请求.
