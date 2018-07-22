@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app-root">
+  <div id="app" ref="appRoot" class="app-root">
     <!--<img src="./assets/logo.png">-->
     <router-view/>
   </div>
@@ -12,7 +12,14 @@
  * @author gonglong-20180710
  */
 export default {
-    name: 'App'
+    name: 'App',
+    mounted: function () {
+        // window.screen.availHeight ==> 屏幕可用工作区高度
+        // window.screen.height ==> 屏幕分辨率的高
+        // window.innerHeight
+        let screenH = window.innerHeight
+        this.$refs.appRoot.style.minHeight = screenH + 'px'
+    }
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="comm-footer">
-        <div class="footer-body g_txt_hover">基于 VUE, ElementUI !</div>
+        <div class="footer-body g_txt_hover">中国-重庆 前端程序员: 龚龙。</div>
     </div>
 </template>
 
@@ -12,14 +12,17 @@ export default {
 
 <style lang="less">
     @footerH: 80px;
+    @borderStyle: 1px solid #dddddd;
     .comm-footer {
         position: relative;
         height: @footerH;
         width: 100%;
-        background-color: yellow;
+        border-top: @borderStyle;
+        box-sizing: border-box;
+        // background-color: yellow;
         .footer-body {
             position: relative;
-            width: 1200px;
+            width: 1000px;
             height: 100%;
             line-height: @footerH;
             margin: 0 auto;

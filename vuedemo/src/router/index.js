@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Home from '@/pages/Home'
-import Error404 from '@/pages/404'
+import Page404 from '@/pages/Page404'
 import DataList from '@/pages/demo/DataList'
 
 Vue.use(Router)
@@ -30,8 +30,8 @@ export default new Router({
             ]
         }, {
             path: '/*',
-            name: 'Error404',
-            component: Error404
+            name: 'Page404',
+            component: Page404
         }
     ]
 })

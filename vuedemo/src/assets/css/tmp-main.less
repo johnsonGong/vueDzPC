@@ -4,17 +4,21 @@
   margin: 0 auto;
 }
 
+// 默认页面内容宽度。
+@comm-page-w: 1000px;
+
 .app-root {
     position: relative;
     top: 0px;
     left: 0px;
     min-height: 300px;
     background-color: #99cd93;
+    box-sizing: border-box;
 }
 
 .comm-page {
     position: relative;
-    width: 1200px;
+    width: @comm-page-w;
     margin: 0 auto;
     box-sizing: border-box;
     margin-top: 10px;

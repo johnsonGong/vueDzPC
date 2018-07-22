@@ -7,7 +7,7 @@
 
 <script>
 export default {
-    name: '404'
+    name: 'Page404'
 }
 </script>
 

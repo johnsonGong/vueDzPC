@@ -48,6 +48,7 @@ export default {
             if (tmpH < 500) {
                 tmpH = 500
             }
+            // header: 100px, footer: 80px;
             let contentH = tmpH - 100 - 80
             this.$refs.mainApp.style.minHeight = tmpH + 'px'
             this.$refs.mainBody.style.minHeight = contentH + 'px'
