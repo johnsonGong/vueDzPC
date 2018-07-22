@@ -1,6 +1,8 @@
 <template>
     <div class="comm-footer">
-        <div class="footer-body g_txt_hover">中国-重庆 前端程序员: 龚龙。</div>
+        <div class="footer-body">
+            <span class="g_txt_hover">中国-重庆 前端程序员: 龚龙。</span>
+            </div>
     </div>
 </template>
 
