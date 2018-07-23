@@ -13,6 +13,12 @@
  */
 export default {
     name: 'App',
+    created: function () {
+        console.log('App->created.')
+    },
+    destroyed: function () {
+        console.log('App->destroyed.')
+    },
     mounted: function () {
         // window.screen.availHeight ==> 屏幕可用工作区高度
         // window.screen.height ==> 屏幕分辨率的高

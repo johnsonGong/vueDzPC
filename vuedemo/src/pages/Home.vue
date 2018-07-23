@@ -36,6 +36,12 @@ export default {
             this.updateSize()
         }
     },
+    created: function () {
+        console.log('Home->created.')
+    },
+    destroyed: function () {
+        console.log('Home->destroyed.')
+    },
     methods: {
         /**
          * 根据 浏览器大小, 设置页面最小高度.

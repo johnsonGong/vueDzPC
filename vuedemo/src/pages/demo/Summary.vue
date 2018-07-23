@@ -22,7 +22,13 @@
  *
  */
 export default {
-    name: 'Summary'
+    name: 'Summary',
+    created: function () {
+        console.log('Summary->created.')
+    },
+    destroyed: function () {
+        console.log('Summary->destroyed.')
+    }
 }
 </script>
 
