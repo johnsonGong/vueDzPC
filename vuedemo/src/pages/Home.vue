@@ -11,14 +11,15 @@
 
 <script>
 /**
- * 网站主页.
+ * 网站主页 (首页).
  *
  * 默认布局介绍:
  * header: 固定(fixed)在顶端.
  * footer: 当body内容较少，不足以使页面呈现滚动状态(overflow: scroll;) footer 固定在 低端;
  *         当body内容较多 且撑出 是页面出现滚动条, footer 随页面高度动态变化并跟随滚动.
  *
- * @author gonglong-20180710
+ * @author gonglong-2018/07/10 09:00
+ *
  */
 import DemoHeader from '@/components/Header'
 import DemoFooter from '@/components/Footer'
@@ -51,6 +52,7 @@ export default {
             // 浏览器窗口的视口的高度(可用高度)
             // https://developer.mozilla.org/zh-CN/docs/Web/API/Window/innerHeight
             let tmpH = window.innerHeight
+            console.log('updateSize --> innerHeight:' + tmpH)
             if (tmpH < 500) {
                 tmpH = 500
             }

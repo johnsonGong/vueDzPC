@@ -21,7 +21,7 @@ export default {
         width: 100%;
         border-top: @borderStyle;
         box-sizing: border-box;
-        // background-color: yellow;
+        /*background-color: yellow;*/
         .footer-body {
             position: relative;
             width: 1000px;
@@ -29,7 +29,7 @@ export default {
             line-height: @footerH;
             margin: 0 auto;
             text-align: center;
-            background-color: #ffffff;
+            /*background-color: #99cd93;*/
         }
     }
 

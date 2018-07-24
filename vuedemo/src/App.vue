@@ -23,8 +23,8 @@ export default {
         // window.screen.availHeight ==> 屏幕可用工作区高度
         // window.screen.height ==> 屏幕分辨率的高
         // window.innerHeight
-        let screenH = window.innerHeight
-        this.$refs.appRoot.style.minHeight = screenH + 'px'
+        // let screenH = window.innerHeight
+        // this.$refs.appRoot.style.minHeight = screenH + 'px'
     }
 }
 </script>
