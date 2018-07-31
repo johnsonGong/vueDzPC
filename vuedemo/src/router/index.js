@@ -5,6 +5,7 @@ import Home from '@/pages/Home'
 import Page404 from '@/pages/Page404'
 import DataList from '@/pages/demo/DataList'
 import Summary from '@/pages/demo/Summary'
+const ArrayList = () => import('@/pages/bug/ArrayList')
 
 Vue.use(Router)
 
@@ -33,6 +34,12 @@ Vue.use(Router)
                     name: 'Summary',
                     meta: {title: 'demo简介'},
                     component: Summary
+                },
+                {
+                    path: 'bug-arrylist',
+                    name: 'ArrayList',
+                    meta: {title: '数组引用'},
+                    component: ArrayList
                 }
             ]
         }, {

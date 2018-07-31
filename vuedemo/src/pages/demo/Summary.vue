@@ -44,6 +44,10 @@ const TARGET_LIST = [
         {
             lbl: '二次封装 elementUI 分页--Pagination (TODO: loading锁)',
             routName: ''
+        },
+        {
+            lbl: '数组引用',
+            routName: 'ArrayList'
         }
     ]
 
