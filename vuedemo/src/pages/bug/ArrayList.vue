@@ -21,7 +21,7 @@
      *
      */
     import _Num from 'lodash/Number'
-    import _Lang from 'lodash/Lang'
+    // import _Lang from 'lodash/Lang'
 
     const stuName = ['伯牙', '子期', '子贡', '子桓', '仲达', '叔达']
     const fruitName = ['苹果', '梨子', '香蕉', '西瓜', '葡萄', '榴莲']
