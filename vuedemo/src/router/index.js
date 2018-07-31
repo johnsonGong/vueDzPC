@@ -6,6 +6,7 @@ import Page404 from '@/pages/Page404'
 import DataList from '@/pages/demo/DataList'
 import Summary from '@/pages/demo/Summary'
 const ArrayList = () => import('@/pages/bug/ArrayList')
+const TestIframe = () => import('@/pages/demo/TestIframe')
 
 Vue.use(Router)
 
@@ -40,6 +41,12 @@ Vue.use(Router)
                     name: 'ArrayList',
                     meta: {title: '数组引用'},
                     component: ArrayList
+                },
+                {
+                    path: 'bug-iframe',
+                    name: 'TestIframe',
+                    meta: {title: '使用iframe'},
+                    component: TestIframe
                 }
             ]
         }, {

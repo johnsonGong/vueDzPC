@@ -48,6 +48,10 @@ const TARGET_LIST = [
         {
             lbl: '数组引用',
             routName: 'ArrayList'
+        },
+        {
+            lbl: '使用Iframe, 获取内嵌html的 dom元素!',
+            routName: 'TestIframe'
         }
     ]
 
