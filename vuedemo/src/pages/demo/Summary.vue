@@ -13,6 +13,7 @@
         <li>熟悉 VUE Router </li>
         <li>熟悉 VUEX </li>
         <li> vue 常规用法(filter, component)</li>
+        <li> 项目中遇到过的难点, 踩过的坑!</li>
     </ul>
 </div>
 </template>

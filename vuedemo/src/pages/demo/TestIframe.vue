@@ -6,7 +6,7 @@
             </h3>
             <div class="content">
                 <p>1. 操作跨域资源的dom元素, css 等;</p>
-                <p>2. 禁止点击 fram 中的dom元素, 如: 标签a, 视频Video;</p>
+                <p>2. 禁止点击 iframe 中的dom元素, 如: 标签a, 视频Video;</p>
             </div>
         </div>
 
