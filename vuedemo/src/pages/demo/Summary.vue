@@ -4,7 +4,7 @@
     <ul class="summ-list">
         <!--<li class="g_txt_hover">1. 使用elementUI表单 &#45;&#45; form.(TODO: 数据校验)</li>-->
         <li v-for="(targetItem, index) in pageTargetList" :key="'target_' + index"
-            :class="{'g_txt_hover': targetItem.routName !== ''}" :title="targetItem.lbl"
+            :class="{'g_txt_hover': targetItem.routName !== '', 'ready-item': targetItem['ready']}" :title="targetItem.lbl"
             @click="moveTo(targetItem.routName)"
             :data-idx="index">{{targetItem.lbl}}
         </li>
@@ -36,11 +36,13 @@ const TARGET_LIST = [
         },
         {
             lbl: '使用 elementUI 表格--table (TODO: 数据行多选, 踩过坑)',
-            routName: 'EleTblSelection'
+            routName: 'EleTblSelection',
+            ready: true
         },
         {
             lbl: '数组引用',
-            routName: 'ArrayList'
+            routName: 'ArrayList',
+            ready: true
         },
         {
             lbl: '使用Iframe, 获取内嵌html的 dom元素!',
@@ -90,6 +92,9 @@ export default {
         margin-top: 10px;
         padding-left: 20px;
         list-style-type: decimal;
+        .ready-item {
+            background-color: greenyellow;
+        }
     }
 }
 </style>

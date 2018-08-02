@@ -9,6 +9,14 @@ axios.defaults.headers.common['Authorization'] = 'test-token-001'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded'
 
+// 开发阶段-修改调试API接口主机域名. 场景: 开发、测试阶段会需要更改接口地址.
+var tmpHost = localStorage.getItem('HTTP-HOST')
+if (typeof tmpHost !== 'undefined' && tmpHost !== null) {
+    axios.defaults.baseURL = tmpHost
+} else {
+    localStorage.setItem('HTTP-HOST', '')
+}
+
 // Add a request interceptor
 axios.interceptors.request.use(function (config) {
     // Do something before request is sent
