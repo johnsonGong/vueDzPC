@@ -19,5 +19,35 @@
                 {"name": "苹果", "price": "15.00"}
             ]
         }
+    },
+    "getTblList": {
+        "message": "表格数据",
+        "success": true,
+        "content": {
+            "list": [{
+                "disabled": true,
+                "date": "2016-05-02",
+                "name": "欧阳",
+                "address": "上海市普陀区金沙江路 1518 弄"
+            }, {
+                "disabled": false,
+                "date": "2016-05-04",
+                "name": "张三",
+                "address": "重庆市沙坪坝区"
+            }, {
+                "disabled": true,
+                "date": "2016-05-01",
+                "name": "李四",
+                "address": "北京市 东城区"
+            }, {
+                "disabled": false,
+                "date": "2016-05-03",
+                "name": "王小虎",
+                "address": "天津市 南开区"
+            }],
+            "pagerConf": {
+                "total": 200
+            }
+        }
     }
 }

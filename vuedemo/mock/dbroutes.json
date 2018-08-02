@@ -1,5 +1,6 @@
 {
   "/demo/initPage.json": "/initPage",
   "/demo/getUserInfo.json*": "/getUserInfo",
-  "/demo/getFruit": "/getFruit"
+  "/demo/getFruit": "/getFruit",
+  "/demo/getTblList": "/getTblList"
 }
