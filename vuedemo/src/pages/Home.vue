@@ -23,13 +23,12 @@
  */
 import DemoHeader from '@/components/Header'
 import DemoFooter from '@/components/Footer'
-import NavList from '@/components/NavList'
+
 export default {
     name: 'Home',
     components: {
         'demo-header': DemoHeader,
-        'demo-footer': DemoFooter,
-        'nav-list': NavList
+        'demo-footer': DemoFooter
     },
     mounted () {
         this.updateSize()

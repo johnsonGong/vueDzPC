@@ -14,7 +14,7 @@
  *
  */
 export default {
-    name: 'BreadcrumbNav',
+    name: 'EleBreadcrumbNav',
     data () {
         return {
         }
