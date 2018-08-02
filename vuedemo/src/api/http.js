@@ -5,10 +5,27 @@
 import axios from 'axios'
 import qs from 'qs'
 
+axios.defaults.headers.common['Authorization'] = 'test-token-001'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded'
 
-// TODO -- axios 拦截器 -20180722
+// Add a request interceptor
+axios.interceptors.request.use(function (config) {
+    // Do something before request is sent
+    return config
+}, function (error) {
+    // Do something with request error
+    return Promise.reject(error)
+})
+
+// Add a response interceptor
+axios.interceptors.response.use(function (response) {
+    // Do something with response data
+    return response
+}, function (error) {
+    // Do something with response error
+    return Promise.reject(error)
+})
 
 export default {
     /**
@@ -83,7 +100,10 @@ export default {
             responseType: 'json',
             data: qs.stringify(opts.data)
         }).then(function (response) {
-            cbSuccess(response)
+            setTimeout(() => {
+                // TODO -- 模拟响应等待。
+                cbSuccess(response)
+            }, 900)
         }).catch(function (errorObj) {
             if (typeof cbFail === 'function') {
                 cbFail(errorObj)
