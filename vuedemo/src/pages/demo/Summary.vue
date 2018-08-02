@@ -27,23 +27,15 @@
 const TARGET_LIST = [
         {
             lbl: '使用elementUI表单 -- form.(TODO: 数据校验)',
-            routName: 'zz'
-        },
-        {
-            lbl: '二次封装 elementUI面包屑导航--breadcrumb (TODO: 30%)',
-            routName: ''
+            routName: 'EleForm'
         },
         {
             lbl: '二次封装 elementUI树形控件--tree (TODO: 数据转换, 踩过坑)',
-            routName: ''
+            routName: 'EleTree'
         },
         {
             lbl: '使用 elementUI 表格--table (TODO: 数据行多选, 踩过坑)',
-            routName: ''
-        },
-        {
-            lbl: '二次封装 elementUI 分页--Pagination (TODO: loading锁)',
-            routName: ''
+            routName: 'EleTblSelection'
         },
         {
             lbl: '数组引用',

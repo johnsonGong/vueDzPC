@@ -3,10 +3,14 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Home from '@/pages/Home'
 import Page404 from '@/pages/Page404'
-import DataList from '@/pages/demo/DataList'
+import PageDataList from '@/pages/demo/PageDataList'
 import Summary from '@/pages/demo/Summary'
+
 const ArrayList = () => import('@/pages/bug/ArrayList')
 const TestIframe = () => import('@/pages/demo/TestIframe')
+const EleForm = () => import('@/pages/demo/EleForm')
+const EleTblSelection = () => import('@/pages/demo/EleTblSelection')
+const EleTree = () => import('@/pages/demo/EleTree')
 
 Vue.use(Router)
 
@@ -28,7 +32,7 @@ Vue.use(Router)
                     path: 'demo-datalist',
                     name: 'DataList',
                     meta: {title: 'demo一览'},
-                    component: DataList
+                    component: PageDataList
                 },
                 {
                     path: 'demo-summary',
@@ -47,6 +51,24 @@ Vue.use(Router)
                     name: 'TestIframe',
                     meta: {title: '使用iframe'},
                     component: TestIframe
+                },
+                {
+                    path: 'demo-ele-form',
+                    name: 'EleForm',
+                    meta: {title: 'element表单提交'},
+                    component: EleForm
+                },
+                {
+                    path: 'demo-ele-tbl',
+                    name: 'EleTblSelection',
+                    meta: {title: 'element表格多选功能'},
+                    component: EleTblSelection
+                },
+                {
+                    path: 'demo-ele-tree',
+                    name: 'EleTree',
+                    meta: {title: 'element树形组件'},
+                    component: EleTree
                 }
             ]
         }, {
