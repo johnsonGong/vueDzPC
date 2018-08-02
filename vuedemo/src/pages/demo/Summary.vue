@@ -93,7 +93,10 @@ export default {
         padding-left: 20px;
         list-style-type: decimal;
         .ready-item {
-            background-color: greenyellow;
+            background-color: #cdfd83;
+        }
+        li {
+            margin-bottom: 5px;
         }
     }
 }
