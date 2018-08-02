@@ -96,11 +96,12 @@
 
     .stu-item {
         position: relative;
-        background-color: yellow;
-        padding: 0 20px;
+        background-color: #909090;
+        padding: 10px 20px;
+        margin-bottom: 10px;
         .tmp-fruit {
             position: relative;
-            background-color: pink;
+            background-color: #dfea6d;
             cursor: pointer;
             margin-bottom: 5px;
             &:hover {
@@ -108,7 +109,7 @@
             }
         }
         .sel-fruit {
-            background-color: greenyellow;
+            background-color: #49b3fd;
         }
     }
 }

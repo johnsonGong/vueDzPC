@@ -35,7 +35,7 @@ const TARGET_LIST = [
             routName: 'EleTree'
         },
         {
-            lbl: '使用 elementUI 表格--table (TODO: 数据行多选, 踩过坑)',
+            lbl: '使用 elementUI 表格--table;',
             routName: 'EleTblSelection',
             ready: true
         },
@@ -93,7 +93,8 @@ export default {
         padding-left: 20px;
         list-style-type: decimal;
         .ready-item {
-            background-color: #cdfd83;
+            background-color: #535451;
+            color: #d4d1d1;
         }
         li {
             margin-bottom: 5px;
