@@ -2,11 +2,12 @@
     <div class="comm-header">
         <div class="header-body ">
             <img class="logo" src="@/assets/logo.png" title="VUE">
-            <!-- <i class="el-icon-circle-plus el-icon"></i> -->
             <span> AND </span>
             <img class="logo" src="@/assets/elementUI-logo.svg"
                 style="width:160px;"  title="elementUI">
+            <router-link :to="{name: 'Home'}" tag="span">
             <span class="g_txt_hover">整合VUE+elementUI, PC端开发.</span>
+            </router-link>
         </div>
     </div>
 </template>

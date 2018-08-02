@@ -1,3 +1,7 @@
+/**
+ * 按需加载, 用多少加载多少 -- 比如: 吃自助餐, 吃多少取多少.
+ *
+ */
 import Vue from 'vue'
 import {
     Button,
