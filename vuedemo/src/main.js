@@ -9,6 +9,7 @@ import API from './api/http'
 // 全局样式
 import '@/assets/css/base.css'
 import '@/assets/css/tmp-main.less'
+import '@/assets/css/demo.less'
 import '@/components/registElement'
 
 Vue.config.productionTip = false
