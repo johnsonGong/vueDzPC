@@ -23,6 +23,13 @@
                 <el-table-column prop="date" label="日期" width="180"></el-table-column>
                 <el-table-column prop="name" label="姓名"></el-table-column>
                 <el-table-column prop="address" label="地址"></el-table-column>
+                <el-table-column label="操作">
+                    <template slot-scope="scope">
+                        <el-button
+                            size="mini"
+                            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                    </template>
+                </el-table-column>
             </el-table>
 
             <div class="content">
@@ -85,11 +92,11 @@
                         }
                     },
                     result => {
-                        console.log('getTblList --> ')
                         let dataObj = result.data.content
                         let pageNum = this.pagerConf.currentPage
                         this.pagerConf.total = dataObj.pagerConf.total
                         let tmpList = [...dataObj.list]
+                        // TODO-这里是模拟数据，需要修改 id,name; 真实环境不需要
                         tmpList.forEach((item, idx) => {
                             item.id += pageNum
                             item.name += ('-' + pageNum)
@@ -119,17 +126,32 @@
              *
              */
             handleSelectionChange (selection) {
-                console.log('handleSelectionChange-->')
                 this.selData = [...selection]
             },
             /**
              * 判定当前行，是否可以勾选.
              * 仅对 type=selection 的列有效.
              *
+             * @param {Object} row 当前行的数据
+             * @param {Number} index 序号
+             *
              * @return {boolean} true: 可以勾选; false: 不可勾选
              */
             handleSelectable (row, index) {
                 return !row.disabled
+            },
+            /**
+             * 编辑数据.
+             *
+             * @param {Number} idx 序号
+             * @param {Object} row 当前行的数据
+             */
+            handleEdit (idx, row) {
+                let tmpData = {
+                    idx,
+                    ...row
+                }
+                console.log('handleEdit:' + JSON.stringify(tmpData))
             }
         }
     }
