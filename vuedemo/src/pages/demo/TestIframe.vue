@@ -1,5 +1,15 @@
 <template>
     <div class="comm-page page-summary">
+        <div class="desc-msg">
+            <h3 class="title">
+                演示: 调查内嵌 iframe 加载跨域资源;
+            </h3>
+            <div class="content">
+                <p>1. 操作跨域资源的dom元素, css 等;</p>
+                <p>2. 禁止点击 fram 中的dom元素, 如: 标签a, 视频Video;</p>
+            </div>
+        </div>
+
         <h2>
             测试-获取 内嵌iframe.
         </h2>

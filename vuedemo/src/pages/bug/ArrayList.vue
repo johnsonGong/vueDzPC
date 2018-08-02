@@ -1,5 +1,13 @@
 <template>
 <div class="comm-page bug-arraylist">
+    <div class="desc-msg">
+        <h3 class="title">
+            演示: 典型的js BUG -- 数组引用;
+        </h3>
+        <div class="content">
+            <p>修改某一行数据, 导致其他行的数据被同步修改!;</p>
+        </div>
+    </div>
 <div class="stu-item" v-for="(stuItem, idx) in studentList" :key="'stu_' + idx">
     <span>name:{{stuItem.name}}</span>
     <span>money:{{stuItem.money}}</span>
