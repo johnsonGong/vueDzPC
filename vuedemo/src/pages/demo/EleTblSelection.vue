@@ -18,7 +18,7 @@
 
             <div class="content">
                 <div class="search-line">
-                    <el-input class="search-word" v-model="searchWord" placeholder="关键词" size="small"></el-input>
+                    <el-input class="search-word" clearable v-model="searchWord" placeholder="关键词" size="small"></el-input>
                     <el-button type="primary" size="small" @click="handleSearch">搜索</el-button>
                 </div>
                 <el-table v-loading="loadingFlg" ref="tblFirst" :data="tableData"
