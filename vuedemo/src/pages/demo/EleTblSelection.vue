@@ -15,24 +15,29 @@
             <h3 class="title">
                 翻页, 反选. 参考资料: http://element-cn.eleme.io/#/zh-CN/component/table
             </h3>
-            <el-table v-loading="loadingFlg" ref="tblFirst" :data="tableData"
-                      @selection-change="handleSelectionChange"
-                      class="tbl-tmp" row-key="id">
-                <el-table-column type="selection" width="55" reserve-selection :selectable="handleSelectable">
-                </el-table-column>
-                <el-table-column prop="date" label="日期" width="180"></el-table-column>
-                <el-table-column prop="name" label="姓名"></el-table-column>
-                <el-table-column prop="address" label="地址"></el-table-column>
-                <el-table-column label="操作">
-                    <template slot-scope="scope">
-                        <el-button
-                            size="mini"
-                            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
 
             <div class="content">
+                <div class="search-line">
+                    <el-input class="search-word" v-model="searchWord" placeholder="关键词" size="small"></el-input>
+                    <el-button type="primary" size="small" @click="handleSearch">搜索</el-button>
+                </div>
+                <el-table v-loading="loadingFlg" ref="tblFirst" :data="tableData"
+                          @selection-change="handleSelectionChange"
+                          class="tbl-tmp" row-key="id">
+                    <el-table-column type="selection" width="55" reserve-selection :selectable="handleSelectable">
+                    </el-table-column>
+                    <el-table-column prop="date" label="日期" width="180"></el-table-column>
+                    <el-table-column prop="name" label="姓名"></el-table-column>
+                    <el-table-column prop="address" label="地址"></el-table-column>
+                    <el-table-column label="操作">
+                        <template slot-scope="scope">
+                            <el-button
+                                size="mini"
+                                @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
+                        </template>
+                    </el-table-column>
+                </el-table>
+
                 <el-pagination class="demo-tmp-pager"
                     background
                     layout="total, prev, pager, next"
@@ -64,6 +69,8 @@
         data () {
             return {
                 tableData: [],
+                // 搜索关键词
+                searchWord: '',
                 pagerConf: {
                     total: 100,
                     currentPage: 1,
@@ -85,10 +92,15 @@
             },
             getTblList () {
                 this.loadingFlg = true
+                let tmpDataIn = {
+                    currentPage: this.pagerConf.currentPage,
+                    pageSize: this.pagerConf.pageSize,
+                    searchWord: this.searchWord
+                }
                 this.API.commPOST({
                         url: '/demo/getTblList',
                         data: {
-                            ...this.pagerConf
+                            ...tmpDataIn
                         }
                     },
                     result => {
@@ -152,6 +164,19 @@
                     ...row
                 }
                 console.log('handleEdit:' + JSON.stringify(tmpData))
+            },
+            /**
+             * 执行搜索.
+             *
+             */
+            handleSearch () {
+                console.log('执行搜索 --> handleSearch:' + JSON.stringify({
+                    searchWord: this.searchWord,
+                    trimWord: this.searchWord.trim()
+                }))
+                // 去掉两端 空格.
+                this.searchWord = this.searchWord.trim()
+                this.handlePagerChange(1)
             }
         }
     }
@@ -161,6 +186,14 @@
     .page-tbl {
         .tbl-tmp {
             margin-bottom: 10px;
+        }
+        .search-line {
+            position: relative;
+            margin-bottom: 10px;
+            .search-word {
+                position: relative;
+                width: 200px;
+            }
         }
         .demo-tmp-pager {
             background-color: #ffffff;
